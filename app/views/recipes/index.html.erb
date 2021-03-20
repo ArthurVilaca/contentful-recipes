@@ -1,0 +1,11 @@
+<h3>Recipes!</h3>
+<div class="grid-container">
+    <% @products.each do |product| %>
+        <div class="contentful_product_item">
+            <a href="recipes/<%= product.id %>">
+                <img src="<%= product.photo.file.url %>" />
+            </a>
+            <p><%= product.title %></p>
+        </div>
+    <% end %>
+</div>

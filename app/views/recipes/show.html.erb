@@ -1,0 +1,16 @@
+<div class="contentful_product">
+    <img src="<%= @product.photo.file.url %>" />
+    <h3><%= @product.title %></h3>
+    <div class="description"><%= @product.description %></div>
+    <% if @chef %>
+        <div class="chef">Chef: <%= @chef.name %></div>
+    <% end %>
+    <% if @tags.length > 0 %>
+        <div class="tags">
+            <p>Tags:</p>
+            <% @tags.each do |tag| %>
+                <span><%= tag.name %></span>
+            <% end %>
+        </div>
+    <% end %>
+</div>
